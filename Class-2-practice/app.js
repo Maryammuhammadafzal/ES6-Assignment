@@ -217,3 +217,9 @@ function function2(){
 }
 let functionReturned = abc(function2)
 functionReturned();
+
+
+
+///////
+// console.log(window.location.assign("https://classroom.google.com/c/NjUwMDIxMDE4NTU4"));
+// console.log(window.location.replace("https://www.asmarterwaytolearn.com/js/28.html"));
