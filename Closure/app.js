@@ -85,22 +85,54 @@ function makeAdder(x) {
 
 // Here's the JavaScript:
 
-function makeSizer(size) {
-    return function () {
-      document.body.style.fontSize = `${size}px`;
-    };
-  }
+// function makeSizer(size) {
+//     return function () {
+//       document.body.style.fontSize = `${size}px`;
+//     };
+//   }
   
-  const size12 = makeSizer(12);
-  const size14 = makeSizer(14);
-  const size16 = makeSizer(16);
+//   const size12 = makeSizer(12);
+//   const size14 = makeSizer(14);
+//   const size16 = makeSizer(16);
 
-//   size12, size14, and size16 are now functions that resize the body text to 12, 14, and 16 pixels, respectively. You can attach them to buttons as demonstrated in the following code example.
+// //   size12, size14, and size16 are now functions that resize the body text to 12, 14, and 16 pixels, respectively. You can attach them to buttons as demonstrated in the following code example.
 
-document.getElementById("size-12").onclick = size12;
-document.getElementById("size-14").onclick = size14;
-document.getElementById("size-16").onclick = size16;
+// document.getElementById("size-12").onclick = size12;
+// document.getElementById("size-14").onclick = size14;
+// document.getElementById("size-16").onclick = size16;
 
-`<button id="size-12">12</button>
-<button id="size-14">14</button>
-<button id="size-16">16</button>`
+// `<button id="size-12">12</button>
+// <button id="size-14">14</button>
+// <button id="size-16">16</button>`
+
+
+
+
+// Lexical scope /environment
+
+let a = 20;
+function outerFunction(){
+    function innerFunction(){
+        function innerMostFunction(){
+            console.log(a);
+
+        }
+        innerMostFunction()
+    }
+    innerFunction()
+}
+
+outerFunction()
+
+function outerFunction(number2){
+    let number1 = 10
+   function innerFunction(){
+       let number3 = 90
+       console.log(number1+number2+number3);
+
+    }
+    return innerFunction
+}
+
+let returningFunction = outerFunction(20)
+console.log(returningFunction());

@@ -111,19 +111,46 @@
 // document.getElementById("demo").innerHTML = fruits.toString();
 
 
+
+// Array methods
+
+// forEach,map,filer,reduce,sort
+
+const numbers = [1,2,3,4];
+
+// Array methods
+// For Each
+numbers.forEach((value,index)=>{
+    console.log(value,index);
+
+})
+
+
 let arr = [1.999 , 2.89 , 3.8 , 4.4 , 5.0];
 
 // Array. map
 // Map return a new array by performing some operation on array element 
-let a = arr.map((value)=>{
-    return value +1 
+let a = arr.map((value) =>{
+    return value + 1 
 })
 // console.log(a , arr);
 
 let mapArray = arr.map(Math.floor);
 // console.log(mapArray);
 
+// map
 
+// const numbers = [1, 2, 3, 4];
+
+// let result = numbers.map(function (value, index) {
+//   if (value % 2 === 0) {
+//     return value;
+//   }
+
+//   return "no value"
+// });
+
+// console.log(result);
 // Array. Filter
 // it give a new filterd value from array
 
@@ -144,3 +171,4 @@ let c = arr.reduce((num1 , num2)=>{
 })
 
 // console.log(c);
+
