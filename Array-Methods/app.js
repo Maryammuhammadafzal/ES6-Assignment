@@ -111,14 +111,18 @@
 // document.getElementById("demo").innerHTML = fruits.toString();
 
 
-let arr = [1 , 2 , 3 , 4 , 5];
+let arr = [1.999 , 2.89 , 3.8 , 4.4 , 5.0];
 
 // Array. map
 // Map return a new array by performing some operation on array element 
 let a = arr.map((value)=>{
     return value +1 
 })
-console.log(a , arr);
+// console.log(a , arr);
+
+let mapArray = arr.map(Math.floor);
+// console.log(mapArray);
+
 
 // Array. Filter
 // it give a new filterd value from array
@@ -127,7 +131,10 @@ let b = arr.filter((value)=>{
    return value < 3;
 })
 
-console.log(b, arr);
+let filterArray = arr.filter();
+console.log(filterArray);
+
+// console.log(b, arr);
 
 // Array .reduce 
 // it returns ony value not array after perform any operation
@@ -136,4 +143,4 @@ let c = arr.reduce((num1 , num2)=>{
     return num1 + num2;
 })
 
-console.log(c);
+// console.log(c);
